@@ -1,0 +1,21 @@
+{
+  "name": "framework-test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "兼容 OpenAI / Anthropic 接口的模拟服务，用于客户端联调；返回 ascii/ 下随机字符画，支持流式输出。",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build:ascii": "node scripts/gen-ascii-manifest.js",
+    "dev:cf": "node scripts/gen-ascii-manifest.js && wrangler dev",
+    "deploy:cf": "node scripts/gen-ascii-manifest.js && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.142.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "GPL-3.0"
+}
